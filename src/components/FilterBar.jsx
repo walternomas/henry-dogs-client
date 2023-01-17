@@ -148,7 +148,7 @@ export default function FilterBar({
             <legend onClick={toggleExpanded}><strong>Temperaments: {expanded ? "🔼" : "🔽"}</strong></legend>
             <div className="content">
               {
-                temperaments && temperaments.map(t => (
+                temperaments && temperaments?.map(t => (
                   <div key={t.id} className="temperaments" style={divStyle}>
                     <input
                       type="checkbox"
