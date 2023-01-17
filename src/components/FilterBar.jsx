@@ -17,7 +17,6 @@ export default function FilterBar({
   order_by, direction, origin, nature, natures, temperaments,
   fnOrder, fnDirection, fnOrigin, fnNature, fnNatures }) {
 
-    console.log('temperaments:',temperaments);
   const [expanded, setExpanded] = useState(false);
 
   const toggleExpanded = () => {
@@ -148,7 +147,7 @@ export default function FilterBar({
           <Fieldset>
             <legend onClick={toggleExpanded}><strong>Temperaments: {expanded ? "🔼" : "🔽"}</strong></legend>
             <div className="content">
-              {/* {
+              {
                 temperaments && temperaments.map(t => (
                   <div key={t.id} className="temperaments" style={divStyle}>
                     <input
@@ -162,7 +161,7 @@ export default function FilterBar({
                     <label htmlFor={t.id}>{t.name}</label>
                   </div>
                 ))
-              } */}
+              }
             </div>
           </Fieldset>
 
