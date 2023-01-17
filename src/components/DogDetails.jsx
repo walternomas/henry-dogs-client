@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getDog } from '../redux/actions';
 import styled from 'styled-components';
 import { SyncLoader } from "react-spinners";
-import dotenv from 'dotenv';
-dotenv.config();
+//import dotenv from 'dotenv';
+//dotenv.config();
 
 const Ul = styled.ul`
   list-style: none;
@@ -55,7 +55,7 @@ export default function DogDetails() {
           <>
             <Card key={dog[0].id}>
               <div>
-                <img src={dog[0].image === '' ? process.env.REACT_APP_CLOUD_IMAGE : dog[0].image} alt={dog[0].name} width="400px" />
+                <img src={dog[0].image === '' ? 'https://res.cloudinary.com/dvxnklc1e/image/upload/v1673812249/k0ohw3ej5yqnleq4ummi.jpg' : dog[0].image} alt={dog[0].name} width="400px" />
               </div>
               <div>
                 <div className="bone"><span>{dog[0].name}</span></div>

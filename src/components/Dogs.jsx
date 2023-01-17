@@ -9,8 +9,8 @@ import Pagination from './Pagination';
 import { Link } from "react-router-dom";
 import SearchBar from './SearchBar';
 import { SyncLoader } from "react-spinners";
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 const Container = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ export default function Dogs() {
 
   const allDogs = useSelector((state) => state.dogs);
   const currentPage = useSelector((state) => state.currentPage);
-  const dogsPerPage = process.env.REACT_APP_SEGMENT;
+  const dogsPerPage = 8;
   const indexOfLastDog = currentPage * dogsPerPage;
   const indexOfFirstDog = indexOfLastDog - dogsPerPage;
   const currentDogs = allDogs.slice(indexOfFirstDog, indexOfLastDog);

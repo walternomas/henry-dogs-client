@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 const Ul = styled.ul`
   list-style: none;
@@ -30,7 +30,7 @@ export default function Dog({ dog }) {
     <>
       <Card>
         <div>
-          <img src={dog.image === '' ? process.env.REACT_APP_CLOUD_IMAGE : dog.image} alt={dog.name} width="250px" />
+          <img src={dog.image === '' ? 'https://res.cloudinary.com/dvxnklc1e/image/upload/v1673812249/k0ohw3ej5yqnleq4ummi.jpg' : dog.image} alt={dog.name} width="250px" />
         </div>
         <Link to={`/dogs/${dog.id}`} className='bones'>
           <span>{dog.name}</span>
