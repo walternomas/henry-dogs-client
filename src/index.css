@@ -1,0 +1,106 @@
+:root {
+  --bg: #2e2e2e;
+  --color: #FFFF01;
+  --font: Montserrat,Roboto,Helvetica,Arial,sans-serif;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Ubicación de la imagen */
+  background-image: url('images/background-large.jpg');
+
+  /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+  background-position: center center;
+
+  /* Para que la imagen de fondo no se repita */
+  background-repeat: no-repeat;
+
+  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  background-attachment: fixed;
+
+  /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+  background-size: cover;
+
+  /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+  background-color: #808080;
+
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url('images/background-small.jpg');
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 22px 16px 16px;
+  background-color: #55422c;
+  backdrop-filter: blur(5px);
+  /* new */
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav a.is-active {
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.titulo {
+  color: var(--color);
+  text-decoration: none;
+}
+
+a.activo {
+  pointer-events: none;
+}
+
+.image-preview {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+.image-preview img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.images-preview-container {
+  display: flex;
+  justify-content: left;
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+  color: red;
+}
+
+ 

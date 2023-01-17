@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+  background-size: cover;
+}
+
+.bone {
+  filter: url('#goo');
+  display: inline-block;
+  text-align: center;
+  background: var(--color);
+  color: var(--bg);
+  font-weight: bold;
+  padding: 1em 1em 1.03em;
+  line-height: 1;
+  border-radius: 0.4em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1.25rem;
+}
+
+.bone::before,
+.bone::after,
+.bone span::before,
+.bone span::after {
+  content: '';
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  display: inline-block;
+  background: var(--color);
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+
+/*top*/
+.bone::before,
+.bone span::before {
+  top: 50%;
+}
+
+/*bottom*/
+.bone::after,
+.bone span::after {
+  bottom: 50%;
+}
+
+/*right*/
+.bone::before,
+.bone::after {
+  right: -10%;
+}
+
+/*left*/
+.bone span::before,
+.bone span::after {
+  left: -10%;
+}
+
+.bone:hover::before,
+.bone:hover::after,
+.bone:hover span::before,
+.bone:hover span::after {
+  transform: none;
+}
+
+/* Bones */
+.bones {
+  filter: url('#goo');
+  display: inline-block;
+  text-align: center;
+  background: var(--color);
+  color: var(--bg);
+  font-weight: bold;
+  padding: 0.5em 0.5em;
+  line-height: 1;
+  border-radius: 0.4em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1.25rem;
+  margin-top: 20px;
+}
+
+.bones::before,
+.bones::after,
+.bones span::before,
+.bones span::after {
+  content: '';
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  display: inline-block;
+  background: var(--color);
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+
+/*top*/
+.bones::before,
+.bones span::before {
+  top: 50%;
+}
+
+/*bottom*/
+.bones::after,
+.bones span::after {
+  bottom: 50%;
+}
+
+/*right*/
+.bones::before,
+.bones::after {
+  right: -10%;
+}
+
+/*left*/
+.bones span::before,
+.bones span::after {
+  left: -10%;
+}
+
+.bones:hover::before,
+.bones:hover::after,
+.bones:hover span::before,
+.bones:hover span::after {
+  transform: none;
+}
