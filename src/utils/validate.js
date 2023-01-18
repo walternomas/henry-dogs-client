@@ -27,6 +27,10 @@ export default function validate(state, error, target, dogs) {
       errors.weight_min = 'The minimum weight is mandatory.';
     }
 
+    if(!/^(0|[1-9][0-9]*)$/.test(state.weight_min)) {
+      errors.weight_min = 'The minimum weight accepts only integer values with no leading zeros.';
+    }
+
     if (state.weight_min && Math.ceil(state.weight_min) < 0) {
       errors.weight_min = 'The minimum weight must be greater than or equal to zero.';
     }
@@ -37,6 +41,10 @@ export default function validate(state, error, target, dogs) {
 
     if (!state.weight_max) {
       errors.weight_max = 'The maximum weight is mandatory.';
+    }
+
+    if(!/^(0|[1-9][0-9]*)$/.test(state.weight_max)) {
+      errors.weight_max = 'The maximum weight accepts only integer values with no leading zeros.';
     }
 
     if (state.weight_max && Math.ceil(state.weight_max) > 100) {
@@ -64,6 +72,10 @@ export default function validate(state, error, target, dogs) {
       errors.height_min = 'The minimum height is mandatory.';
     }
 
+    if(!/^(0|[1-9][0-9]*)$/.test(state.height_min)) {
+      errors.height_min = 'The minimum height accepts only integer values with no leading zeros.';
+    }
+
     if (state.height_min && Math.ceil(state.height_min) < 0) {
       errors.height_min = 'The minimum height must be greater than or equal to zero.';
     }
@@ -74,6 +86,10 @@ export default function validate(state, error, target, dogs) {
 
     if (!state.height_max) {
       errors.height_max = 'The maximum height is mandatory.';
+    }
+
+    if(!/^(0|[1-9][0-9]*)$/.test(state.height_max)) {
+      errors.height_max = 'The maximum height accepts only integer values with no leading zeros.';
     }
 
     if (state.height_max && Math.ceil(state.height_max) < 0) {
@@ -101,6 +117,10 @@ export default function validate(state, error, target, dogs) {
       errors.life_span_min = 'The minimum life span is mandatory.';
     }
 
+    if(!/^(0|[1-9][0-9]*)$/.test(state.life_span_min)) {
+      errors.life_span_min = 'The minimum life span accepts only integer values with no leading zeros.';
+    }
+
     if (state.life_span_min && Math.ceil(state.life_span_min) <= 0) {
       errors.life_span_min = 'The minimum life span must be greater than or equal to 1.';
     }
@@ -111,6 +131,10 @@ export default function validate(state, error, target, dogs) {
 
     if (!state.life_span_max) {
       errors.life_span_max = 'The maximum life span is mandatory.';
+    }
+
+    if(!/^(0|[1-9][0-9]*)$/.test(state.life_span_max)) {
+      errors.life_span_max = 'The maximum life span accepts only integer values with no leading zeros.';
     }
 
     if (state.life_span_max && Math.ceil(state.life_span_max) <= 0) {
