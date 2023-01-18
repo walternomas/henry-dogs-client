@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SearchDiv = styled.div`
-background-color: #55422c;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0 0 1rem 0;
+  background-color: #55422c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 1rem 0;
 `;
 
 export default function SearchBar({ search, fnSearch, fnSearchClick, fnSearchBlank }) {
@@ -69,7 +69,8 @@ export default function SearchBar({ search, fnSearch, fnSearchClick, fnSearchBla
         defaultValue={search}
         onChange={fnSearch}
         onKeyDown={handleKeyDown}
-        style={searchStyle}
+        style={searchStyle} 
+        autoComplete='off'
       />
       <button
         id='searchClick'
