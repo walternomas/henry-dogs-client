@@ -21,6 +21,7 @@
   margin-top: 30px;
   padding: 0;
 }
+
 .paginated li {
   list-style: none;
   display: flex;
@@ -39,32 +40,31 @@
 
 
 .paginated .active {
-
-background: var(--color);
-color: #1f1f1f;
+  background: var(--color);
+  color: #1f1f1f;
 }
 
 .paginated p {
-/* font-family: 'Sono'; */
-font-size: 1.3rem;
-font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .disabled {
-pointer-events: none;
-color: rgba(0, 0, 0, 0.43);
+  pointer-events: none;
+  background: transparent !important;
 }
+
 .disabled:hover {
-background-color: transprent;
-cursor: default;
+  background-color: transprent;
+  cursor: default;
 }
 
 @media (max-width:400px) {
-.paginated li{
-  width: 30px;
-  height: 50px;
-}
-.paginated p{
-  font-size: 1rem;
-}
+  .paginated li{
+    width: 30px;
+    height: 50px;
+  }
+  .paginated p{
+    font-size: 1rem;
+  }
 }
