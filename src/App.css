@@ -132,3 +132,35 @@
 .bones:hover span::after {
   transform: none;
 }
+
+.bone-inactive {
+  display: inline-block;
+  text-align: center;
+  background: gainsboro;
+  color: gray;
+  font-weight: bold;
+  padding: 1em 1em 1.03em;
+  line-height: 1;
+  border-radius: 6rem;
+  position: relative;
+  min-width: 8.23em;
+  font-family: var(--font);
+  font-size: 1.25rem;
+  cursor: not-allowed;
+}
+
+.bone-active {
+  display: inline-block;
+  text-align: center;
+  background: var(--color);
+  color: var(--bg);
+  font-weight: bold;
+  padding: 1em 1em 1.03em;
+  line-height: 1;
+  border-radius: 6rem;
+  position: relative;
+  min-width: 8.23em;
+  font-family: var(--font);
+  font-size: 1.25rem;
+  cursor: pointer;
+}

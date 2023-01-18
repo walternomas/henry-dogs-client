@@ -320,7 +320,7 @@ export default function Form() {
             id='btnSubmit'
             type="submit"
             disabled={button}
-            className='bone'
+            className={button ? 'bone-inactive' : 'bone-active'}
           ><span>Save</span>
           </button>
         </form>
