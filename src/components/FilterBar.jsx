@@ -128,12 +128,12 @@ export default function FilterBar({
           <input
             type="radio"
             name="nature"
-            id="all"
+            id="all-included"
             value="all"
             onChange={fnNature}
             checked={nature === 'all'}
           />
-          <label htmlFor="all">Any</label>
+          <label htmlFor="all-included">Any</label>
           <input
             type="radio"
             name="nature"
@@ -142,7 +142,7 @@ export default function FilterBar({
             onChange={fnNature}
             checked={nature === 'selection'}
           />
-          <label htmlFor="select">Selected</label>
+          <label htmlFor="selection">Selected</label>
 
           <Fieldset>
             <legend onClick={toggleExpanded}><strong>Temperaments: {expanded ? "🔼" : "🔽"}</strong></legend>
